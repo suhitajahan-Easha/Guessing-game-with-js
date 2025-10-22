@@ -5,8 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Nunito", sans-serif;
-    font-weight: 400;
-    
+    font-weight: 400; 
 }
 .container{
     height: 100vh;
@@ -15,7 +14,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .card{
     width: 32rem;
@@ -66,7 +64,6 @@ button{
 button:hover{
     background-color: orangered;
 }
-
 p{
     color: white;
     text-align: center;

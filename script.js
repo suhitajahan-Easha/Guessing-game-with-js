@@ -1,3 +1,4 @@
+//query///
 const form=document.querySelector("form");
 const cardBody=document.querySelector(".card-body");
 const input =form.querySelector("#guessingNumber");
@@ -13,9 +14,12 @@ let attempt=0;
 let win=0;
 let loss=0;
 
+//adding event listener
 
 form.addEventListener("submit", function(event){
+
     event.preventDefault();
+
     attempt++;
     if(attempt==5){
         input.disabled=true;
@@ -29,9 +33,13 @@ form.addEventListener("submit", function(event){
     
    input.value=" ";
 });
+
+//main function///
 const checkResult=(guess)=>{
     console.log(guess);
+    
     const randomNumber=getrandomNumber(5);
+
     if(randomNumber == guess){
         win++;
         p1.innerHTML=`You have Won`; 
@@ -40,6 +48,7 @@ const checkResult=(guess)=>{
         loss++;
         p1.innerHTML=`You have lost; random number was: ${randomNumber}`;
     }
+    
     message.innerHTML=`Won:${win},Lost:${loss}`;
     message.classList.add("large-text");
     cardBody.appendChild(message);
